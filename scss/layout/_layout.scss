@@ -1,0 +1,139 @@
+// commons
+body {
+    font-family: 'Gilroy';
+    color: var(--black);
+    font-weight: 300;
+}
+
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-framed {
+    padding-right: var(--main-right-padding);
+    padding-left: var(--main-left-padding);
+}
+
+// header
+.header-main {
+    background-image: url('../../img/backgrounds/xleb-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    padding-top: 65px;
+    padding-bottom: 60px;
+}
+
+.header-main__top {
+    display: flex;
+}
+
+// greeting
+.greeting {
+    font-family: 'Tahoma';
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.greeting__item {
+    background-color: var(--black);
+    opacity: 0.85;
+    padding-left: 10px;
+}
+
+.greeting__title {
+    padding-top: 8px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.greeting__item--info {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 15px;
+    font-size: 16px;
+    color: var(--secondary-lighter);
+}
+
+// switch-lang
+.switch-lang {
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.switch-lang__option {
+    text-transform: uppercase;
+}
+
+.switch-lang__option {
+    color: var(--secondary);
+}
+
+.switch-lang__option--active {
+    color: var(--white);
+}
+.switch-lang__border {
+    color: var(--white);
+}
+
+.btn-burger {
+    margin-top: 10px;
+}
+
+.header-main__top-right {
+    margin-left: auto;
+}
+
+.header-main__bottom {
+    margin-top: 100px;
+}
+
+.cat-pic {
+    margin: auto;
+}
+
+// main
+
+.main {
+    font-family: 'Jura';
+}
+
+// title
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.title--margin {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.title--about {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+// about
+.about__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    font-weight: 400;
+    white-space: pre-line;
+}

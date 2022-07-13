@@ -1,0 +1,52 @@
+body {
+    font-family: 'Gilroy';
+    color: var(--black);
+    font-weight: 300;
+}
+
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-framed {
+    padding-right: var(--main-right-padding);
+    padding-left: var(--main-left-padding);
+}
+
+.btn {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.space-row {
+    height: 1px;
+    width: var(--space-row);
+}
+
+/* header */
+.header {
+    padding-top: 35px;
+}
+
+/* .nav-list */
+.nav-list {
+    display: flex;
+}
+
+.nav-link {
+    font-weight: 600;
+    flex: 1;
+    color: var(--secondary);
+}
+
+.nav-link:last-child {
+    flex: none;
+}
+
+.header-emphasize-line {
+    margin-top: 40px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--secondary);
+} /*# sourceMappingURL=main.css.map */

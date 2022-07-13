@@ -1,0 +1,7 @@
+{
+    "logging": {
+        "moduleLoad": false,
+        "threadExit": false,
+        "processExit": true,
+    }
+}

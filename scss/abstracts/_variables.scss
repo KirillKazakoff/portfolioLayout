@@ -1,0 +1,58 @@
+$mobile: 400px;
+
+$red: #ff595e;
+$blue: #0a2463;
+$yellow: #f9cb40;
+
+$cursors: pointer auto inherit;
+
+$theme-colors: (
+    primary: $red,
+    secondary: $blue,
+    warning: $yellow,
+);
+
+$btn-background: #ff595e;
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@function hextorgb($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+    /* paddings */
+    --main-left-padding: 250px;
+    --main-right-padding: 250px;
+
+    /* borders */
+
+    /* additional */
+    --space-row: 30px;
+
+    /* colors */
+    --black: #000000;
+    --white: #fff;
+    --white-high: #ebebeb;
+    --secondary: #868686;
+    --secondary-lighter: #cccccc;
+    // --black-rgb: hextorgb(#000000);
+
+    @include mobile {
+        --main-left-padding: 30px;
+        --main-right-padding: 30px;
+    }
+}
+
+// --secondary: #928f94;
+// --secondary-lighter: #c4c4c4;
+// --secondary-super-light: #e5e5e5;
+
+// --black: #292929;
+// --black-light: #3e3c41;
+// --bg-main: #ffa800;
+// --bg-main-medium: #ffd98f;

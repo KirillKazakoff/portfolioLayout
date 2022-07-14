@@ -1,4 +1,4 @@
-$mobile: 400px;
+$desktop: 500px;
 
 $red: #ff595e;
 $blue: #0a2463;
@@ -14,8 +14,8 @@ $theme-colors: (
 
 $btn-background: #ff595e;
 
-@mixin mobile {
-    @media (min-width: #{$mobile}) {
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
         @content;
     }
 }
@@ -37,8 +37,8 @@ $btn-background: #ff595e;
 
 :root {
     /* paddings */
-    --main-left-padding: 250px;
-    --main-right-padding: 250px;
+    --main-left-padding: 30px;
+    --main-right-padding: 30px;
 
     /* borders */
 
@@ -56,9 +56,9 @@ $btn-background: #ff595e;
     --secondary-super-light: #f6f6f6;
     // --black-rgb: hextorgb(#000000);
 
-    @include mobile {
-        --main-left-padding: 30px;
-        --main-right-padding: 30px;
+    @include desktop {
+        --main-left-padding: 50px;
+        --main-right-padding: 50px;
     }
 }
 

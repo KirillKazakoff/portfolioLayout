@@ -37,9 +37,9 @@
         </div>
     </header>
     <main class='main'>
-        <section class='about'>
+        <section class='about main-framed'>
             <span class='title title--margin title--about'>About me</span>
-            <div class='about__text'>
+            <div class='about__text text--info'>
                 <p class='about__text-p'>I'm a junior frontend developer... Love coding so much... and I'm a rapper as well, bruhhh!</p>
                 <p class='about__text-p'>I've graduated the course on Netology on program
                     “Frontend-developer from scratch”
@@ -47,9 +47,9 @@
                 <p class='about__text-p'>Generally speaking, I'm great person... Employ me, please!</p>
             </div>
         </section>
-        <section class='skills'>
+        <section class='skills main-framed'>
             <span class='title title--margin'>Skills</span>
-            <ul class='skills__list'>
+            <ul class='skills__list text--info'>
                 <li class='skills__list-item'>
                     <span class='skills__list-item-hyphen'>-</span>
                     <span class='skills__list-item-text'>JavaScript, knowledge of basic OOP principles</span>
@@ -88,6 +88,71 @@
                 </li>
             </ul>
         </section>
+        <section class='portfolio main-framed'>
+            <span class='title title--margin-portfolio'>Portfolio</span>
+            <ul class='portfolio__list'>
+                <li class='portfolio__item'>
+                    <img class='portfolio__item-img' src='./img/projects/React-Main-Project-desktop.png' alt='main-project' />
+                    <div class='project__info'>
+                        <span class='project__title project__title-main'>Main Project</span>
+                        <span class='project__title project__link link'>
+                            Railway ticket booking system
+                        </span>
+                        <span class='project__link link'>React-Redux</span>
+                    </div>
+                </li>
+                <li class='portfolio__item'>
+                    <img class='portfolio__item-img' src='./img/projects/JS-Project-desktop.png' alt='JS-project' />
+                    <div class='project__info'>
+                        <span class='project__title project__link link'>
+                            WhatsAppBot
+                        </span>
+                        <span class='project__link link'>JS-native application</span>
+                    </div>
+                </li>
+                <li class='portfolio__item'>
+                    <img class='portfolio__item-img' src='./img/projects/CSS-Blog-desktop.png' alt='CSS-project' />
+                    <div class='project__info'>
+                        <span class='project__title project__link link'>
+                            Site-blog
+                        </span>
+                        <span class='project__link link'>HTML-CSS, adaptive layout</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class='contacts main-framed'>
+            <span class='title title--margin'>Contacts</span>
+            <span class='contacts__desc'>Want to know more or just chat?
+                You are welcome!
+            </span>
+            <ul class='socials'>
+                <li class='socials__item'>
+                    <a class='socials__item-link' href='./#'>
+                        <img class='socials__item-img' src='./svg/email.svg' alt='email' />
+                    </a>
+                </li>
+                <li class='socials__item'>
+                    <a class='socials__item-link' href='./#'>
+                        <img class='socials__item-img' src='./svg/linkedIn.svg' alt='linkedIn' />
+                    </a>
+                </li>
+                <li class='socials__item'>
+                    <a class='socials__item-link' href='./#'>
+                        <img class='socials__item-img' src='./svg/ig.svg' alt='ig' />
+                    </a>
+                </li>
+                <li class='socials__item'>
+                    <a class='socials__item-link' href='./#'>
+                        <img class='socials__item-img' src='./svg/vk.svg' alt='vk' />
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <footer class='footer main-framed'>
+            <a href='/#' class='link footer__link'>Check out my music! Like me on VK and SoundCloud!</a>
+            <img class='footer__seagull seagull' src='./img/others/seagull.png' alt='seagull'>
+        </footer>
     </main>
 </body>
 

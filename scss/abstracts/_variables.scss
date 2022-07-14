@@ -20,6 +20,17 @@ $btn-background: #ff595e;
     }
 }
 
+@mixin fcolumn($gap) {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gap;
+}
+
+@mixin margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @function hextorgb($hex) {
     @return red($hex), green($hex), blue($hex);
 }
@@ -36,10 +47,13 @@ $btn-background: #ff595e;
 
     /* colors */
     --black: #000000;
+    --black-light: #383838;
     --white: #fff;
     --white-high: #ebebeb;
     --secondary: #868686;
     --secondary-lighter: #cccccc;
+    --secondary-medium-light: #e6e6e6;
+    --secondary-super-light: #f6f6f6;
     // --black-rgb: hextorgb(#000000);
 
     @include mobile {

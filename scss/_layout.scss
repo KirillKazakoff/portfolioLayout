@@ -1,5 +1,6 @@
 // commons
 body {
+    background-color: black;
     font-family: 'Gilroy';
     color: var(--black);
     font-weight: 300;
@@ -11,12 +12,78 @@ body {
 }
 
 .main-framed {
-    padding-right: var(--main-right-padding);
-    padding-left: var(--main-left-padding);
+    padding-right: var(--main-padding);
+    padding-left: var(--main-padding);
+}
+
+.flex {
+    display: flex;
+}
+
+// popup
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    height: 100vh;
+    width: 100vw;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: var(--white);
+}
+
+.popup--hidden {
+    display: none;
+}
+
+.nav {
+    @include fcolumn(50px);
+    font-family: 'Jura';
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.nav__item {
+    flex: 1;
+    color: var(--secondary);
+}
+
+.nav__item:last-child {
+    flex: none;
+}
+
+.nav__item:nth-child(n + 2) {
+    margin-left: 20px;
+}
+
+.body__container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--white);
 }
 
 // header
-.header-main {
+.header__nav {
+    display: none;
+    @include desktop {
+        height: 90px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 10%;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+    }
+}
+
+.header__container {
     background-image: url('../img/backgrounds/xleb-header-mobile2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,10 +91,24 @@ body {
 
     padding-top: 65px;
     padding-bottom: 60px;
+
+    @include desktop {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-image: url('../img/backgrounds/xleb-header-desktop.png');
+        height: 480px;
+
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.header-main__top {
+.header__top {
     display: flex;
+    @include desktop {
+        margin-top: 10px;
+        order: 2;
+    }
 }
 
 // greeting
@@ -85,19 +166,41 @@ body {
 }
 
 .btn-burger {
-    margin-top: 10px;
-}
-
-.header-main__top-right {
     margin-left: auto;
+    margin-top: 10px;
+    align-self: flex-start;
+
+    @include desktop {
+        display: none;
+    }
 }
 
-.header-main__bottom {
-    margin-top: 100px;
+.btn-burger__img {
+    width: 40px;
+}
+
+.header__pic {
+    display: flex;
+    margin-top: 120px;
+    justify-content: center;
+
+    @include desktop {
+        order: 1;
+        margin-top: 0;
+        margin-right: 30px;
+        margin-left: -200px;
+    }
+
+    @include pre-pre-desktop {
+        margin-left: 0;
+    }
 }
 
 .cat-pic {
-    margin: auto;
+    @include desktop {
+        width: 215px;
+        height: 220px;
+    }
 }
 
 // main
@@ -117,6 +220,11 @@ body {
 .title--margin {
     padding-top: 50px;
     padding-bottom: 40px;
+
+    @include desktop {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
 }
 
 .title--about {
@@ -138,11 +246,20 @@ body {
 
 .about__text {
     @include fcolumn(30px);
+    @include margin;
 
     text-align: center;
     width: 90%;
-    margin: auto;
+    max-width: 480px;
     white-space: pre-line;
+
+    @include desktop {
+        font-size: 20px;
+        row-gap: 60px;
+        max-width: 540px;
+        line-height: 25px;
+        width: 100%;
+    }
 }
 
 // skills
@@ -152,6 +269,14 @@ body {
 
 .skills__list {
     @include fcolumn(20px);
+    @include margin;
+    max-width: 480px;
+
+    @include desktop {
+        font-size: 20px;
+        max-width: 540px;
+        line-height: 30px;
+    }
 }
 
 .skills__list-item {
@@ -195,10 +320,16 @@ body {
 .project__title-main {
     color: var(--black-light);
     display: block;
+    @include desktop {
+        font-size: 24px;
+    }
 }
 
 .project__link {
     font-weight: 400;
+    @include desktop {
+        font-size: 22px;
+    }
 }
 
 .link {
@@ -221,6 +352,11 @@ body {
     white-space: pre-line;
     text-align: center;
     margin-bottom: 45px;
+
+    @include desktop {
+        font-size: 22px;
+        margin-bottom: 70px;
+    }
 }
 
 .socials {
@@ -246,7 +382,7 @@ body {
 // footer
 
 .footer {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 60px;
 }
 
@@ -255,7 +391,12 @@ body {
     display: block;
     text-align: center;
     font-weight: 200;
+    max-width: 300px;
+    line-height: 28px;
     @include margin;
+    @include desktop {
+        font-size: 18px;
+    }
 }
 
 .footer__seagull {
@@ -263,4 +404,8 @@ body {
     height: 115px;
     margin-top: 20px;
     @include margin;
+    @include desktop {
+        width: 150px;
+        height: 140px;
+    }
 }

@@ -64,9 +64,9 @@ label {
     display: block;
 }
 
-/* ::-webkit-scrollbar {
-	width: 0;
-} */
+::-webkit-scrollbar {
+    width: 0;
+}
 
 input {
     font-size: inherit;

@@ -1,5 +1,3 @@
-$desktop: 500px;
-
 $red: #ff595e;
 $blue: #0a2463;
 $yellow: #f9cb40;
@@ -14,8 +12,31 @@ $theme-colors: (
 
 $btn-background: #ff595e;
 
+$tablet: 568px;
+$desktop: 768px;
+$pre-pre-desktop: 1100px;
+$pre-desktop: 1268px;
+
 @mixin desktop {
     @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin pre-desktop {
+    @media (max-width: #{$pre-desktop}) and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin pre-pre-desktop {
+    @media (max-width: #{$pre-pre-desktop}) and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
         @content;
     }
 }
@@ -31,17 +52,16 @@ $btn-background: #ff595e;
     margin-right: auto;
 }
 
+@mixin framed-globally($px) {
+    padding-left: calc(var(--main-padding) + $px);
+    padding-right: calc(var(--main-padding) + $px);
+}
+
 @function hextorgb($hex) {
     @return red($hex), green($hex), blue($hex);
 }
 
 :root {
-    /* paddings */
-    --main-left-padding: 30px;
-    --main-right-padding: 30px;
-
-    /* borders */
-
     /* additional */
     --space-row: 30px;
 
@@ -54,11 +74,23 @@ $btn-background: #ff595e;
     --secondary-lighter: #cccccc;
     --secondary-medium-light: #e6e6e6;
     --secondary-super-light: #f6f6f6;
-    // --black-rgb: hextorgb(#000000);
+
+    // paddings
+    --main-padding: 35px;
+    @include tablet {
+        --main-padding: 50px;
+    }
 
     @include desktop {
-        --main-left-padding: 50px;
-        --main-right-padding: 50px;
+        --main-padding: 250px;
+    }
+
+    @include pre-desktop {
+        --main-padding: 150px;
+    }
+
+    @include pre-pre-desktop {
+        --main-padding: 80px;
     }
 }
 

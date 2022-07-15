@@ -11,149 +11,178 @@
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
-<body>
-    <header class="header-main main-framed">
-        <div class="header-main__top">
-            <div class='header-main__top-left'>
-                <div class="greeting">
-                    <span class="greeting__item greeting__title"> CAT IN BREAD 🍞 </span>
-                    <span class="greeting__item greeting__myname greeting__item--info">Kirill Kazakov</span>
-                    <span class="greeting__item greeting__myinfo greeting__item--info"> Magadan, 22 y.o</span>
-                    <div class="greeting__item switch-lang">
-                        <span class='switch-lang__option switch-lang__option--active'>RU</span>
-                        <span class='switch-lang__border'>|</span>
-                        <span class='switch-lang__option'>ENG</span>
+<body class='body'>
+    <div class='body__container'>
+        <header class="header">
+            <nav class='nav header__nav main-framed'>
+                <li class='nav__item'>Main</li>
+                <li class='nav__item'>About</li>
+                <li class='nav__item'>Skills</li>
+                <li class='nav__item'>Portfollio</li>
+                <li class='nav__item'>Contacts</li>
+            </nav>
+            <div class='header__container main-framed'>
+                <div class="header__top">
+                    <div class="greeting">
+                        <span class="greeting__item greeting__title"> CAT IN BREAD 🍞 </span>
+                        <span class="greeting__item greeting__myname greeting__item--info">Kirill Kazakov</span>
+                        <span class="greeting__item greeting__myinfo greeting__item--info"> Magadan, 22 y.o</span>
+                        <div class="greeting__item switch-lang">
+                            <span class='switch-lang__option switch-lang__option--active'>RU</span>
+                            <span class='switch-lang__border'>|</span>
+                            <span class='switch-lang__option'>ENG</span>
+                        </div>
                     </div>
+                    <button class="btn-burger">
+                        <img class="btn-burger__img" src="./svg/burger.svg" alt="burger" width='33px' />
+                    </button>
+                </div>
+
+                <div class='header__pic'>
+                    <img class='cat-pic' src='./img/others/kot-mobile.png' />
                 </div>
             </div>
-            <div class='header-main__top-right'>
-                <button class="btn-burger">
-                    <img class="btn-burger__img" src="./svg/burger.svg" alt="burger" width='33px' />
-                </button>
-            </div>
+        </header>
+        <main class='main'>
+            <section class='about main-framed'>
+                <span class='title title--margin title--about'>About me</span>
+                <div class='about__text text--info'>
+                    <p class='about__text-p'>I'm a junior frontend developer... Love coding so much... and I'm a rapper as well, bruhhh!</p>
+                    <p class='about__text-p'>I've graduated the course on Netology on program
+                        “Frontend-developer from scratch”
+                    </p>
+                    <p class='about__text-p'>Generally speaking, I'm great person...
+                        Employ me, please!</p>
+                </div>
+            </section>
+            <section class='skills main-framed'>
+                <span class='title title--margin'>Skills</span>
+                <ul class='skills__list text--info'>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>JavaScript, knowledge of basic OOP principles</span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>TypeScript</span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>React, React-router</span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>Redux</span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>Understanding of protocol HTTP/HTTPS, hands-on experience
+                            relating to interaction with server API
+                        </span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>HTML, CSS, SCSS, BEM-metodology, having experience with
+                            CSS-IN-JS
+                        </span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>GIT</span>
+                    </li>
+                    <li class='skills__list-item'>
+                        <span class='skills__list-item-hyphen'>-</span>
+                        <span class='skills__list-item-text'>Webpack</span>
+                    </li>
+                </ul>
+            </section>
+            <section class='portfolio main-framed'>
+                <span class='title title--margin-portfolio'>Portfolio</span>
+                <ul class='portfolio__list'>
+                    <li class='portfolio__item'>
+                        <img class='portfolio__item-img' src='./img/projects/React-Main-Project-desktop.png' alt='main-project' />
+                        <div class='project__info'>
+                            <span class='project__title project__title-main'>Main Project</span>
+                            <span class='project__title project__link link'>
+                                Railway ticket booking system
+                            </span>
+                            <span class='project__link link'>React-Redux</span>
+                        </div>
+                    </li>
+                    <li class='portfolio__item'>
+                        <img class='portfolio__item-img' src='./img/projects/JS-Project-desktop.png' alt='JS-project' />
+                        <div class='project__info'>
+                            <span class='project__title project__link link'>
+                                WhatsAppBot
+                            </span>
+                            <span class='project__link link'>JS-native application</span>
+                        </div>
+                    </li>
+                    <li class='portfolio__item'>
+                        <img class='portfolio__item-img' src='./img/projects/CSS-Blog-desktop.png' alt='CSS-project' />
+                        <div class='project__info'>
+                            <span class='project__title project__link link'>
+                                Site-blog
+                            </span>
+                            <span class='project__link link'>HTML-CSS, adaptive layout</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class='contacts main-framed'>
+                <span class='title title--margin'>Contacts</span>
+                <span class='contacts__desc'>Want to know more or just chat?
+                    You are welcome!
+                </span>
+                <ul class='socials'>
+                    <li class='socials__item'>
+                        <a class='socials__item-link' href='./#'>
+                            <img class='socials__item-img' src='./svg/email.svg' alt='email' />
+                        </a>
+                    </li>
+                    <li class='socials__item'>
+                        <a class='socials__item-link' href='./#'>
+                            <img class='socials__item-img' src='./svg/linkedIn.svg' alt='linkedIn' />
+                        </a>
+                    </li>
+                    <li class='socials__item'>
+                        <a class='socials__item-link' href='./#'>
+                            <img class='socials__item-img' src='./svg/ig.svg' alt='ig' />
+                        </a>
+                    </li>
+                    <li class='socials__item'>
+                        <a class='socials__item-link' href='./#'>
+                            <img class='socials__item-img' src='./svg/vk.svg' alt='vk' />
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <footer class='footer main-framed'>
+                <a href='/#' class='link footer__link'>Check out my music! Like me on VK and SoundCloud!</a>
+                <img class='footer__seagull seagull' src='./img/others/seagull.png' alt='seagull'>
+            </footer>
+        </main>
+        <div class='popup main-framed popup--hidden'>
+            <ul class='nav'>
+                <li class='nav__item'>
+                    <a class='nav__link' href='/#'>Home</a>
+                </li>
+                <li class='nav__item'>
+                    <a class='nav__link' href='/#'>About me</a>
+                </li>
+                <li class='nav__item'>
+                    <a class='nav__link' href='/#'>Skills</a>
+                </li>
+                <li class='nav__item'>
+                    <a class='nav__link' href='/#'>Portfolio</a>
+                </li>
+                <li class='nav__item'>
+                    <a class='nav__link' href='/#'>Contacts</a>
+                </li>
+            </ul>
+            <img class='cross-mark' src='./svg/cross.svg' />
         </div>
-        <div class='header-main__bottom'>
-            <img class='cat-pic' src='./img/others/kot-mobile.png' />
-        </div>
-    </header>
-    <main class='main'>
-        <section class='about main-framed'>
-            <span class='title title--margin title--about'>About me</span>
-            <div class='about__text text--info'>
-                <p class='about__text-p'>I'm a junior frontend developer... Love coding so much... and I'm a rapper as well, bruhhh!</p>
-                <p class='about__text-p'>I've graduated the course on Netology on program
-                    “Frontend-developer from scratch”
-                </p>
-                <p class='about__text-p'>Generally speaking, I'm great person... Employ me, please!</p>
-            </div>
-        </section>
-        <section class='skills main-framed'>
-            <span class='title title--margin'>Skills</span>
-            <ul class='skills__list text--info'>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>JavaScript, knowledge of basic OOP principles</span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>TypeScript</span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>React, React-router</span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>Redux</span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>Understanding of protocol HTTP/HTTPS, hands-on experience
-                        relating to interaction with server API
-                    </span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>HTML, CSS, SCSS, BEM-metodology, having experience with
-                        CSS-IN-JS
-                    </span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>GIT</span>
-                </li>
-                <li class='skills__list-item'>
-                    <span class='skills__list-item-hyphen'>-</span>
-                    <span class='skills__list-item-text'>Webpack</span>
-                </li>
-            </ul>
-        </section>
-        <section class='portfolio main-framed'>
-            <span class='title title--margin-portfolio'>Portfolio</span>
-            <ul class='portfolio__list'>
-                <li class='portfolio__item'>
-                    <img class='portfolio__item-img' src='./img/projects/React-Main-Project-desktop.png' alt='main-project' />
-                    <div class='project__info'>
-                        <span class='project__title project__title-main'>Main Project</span>
-                        <span class='project__title project__link link'>
-                            Railway ticket booking system
-                        </span>
-                        <span class='project__link link'>React-Redux</span>
-                    </div>
-                </li>
-                <li class='portfolio__item'>
-                    <img class='portfolio__item-img' src='./img/projects/JS-Project-desktop.png' alt='JS-project' />
-                    <div class='project__info'>
-                        <span class='project__title project__link link'>
-                            WhatsAppBot
-                        </span>
-                        <span class='project__link link'>JS-native application</span>
-                    </div>
-                </li>
-                <li class='portfolio__item'>
-                    <img class='portfolio__item-img' src='./img/projects/CSS-Blog-desktop.png' alt='CSS-project' />
-                    <div class='project__info'>
-                        <span class='project__title project__link link'>
-                            Site-blog
-                        </span>
-                        <span class='project__link link'>HTML-CSS, adaptive layout</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class='contacts main-framed'>
-            <span class='title title--margin'>Contacts</span>
-            <span class='contacts__desc'>Want to know more or just chat?
-                You are welcome!
-            </span>
-            <ul class='socials'>
-                <li class='socials__item'>
-                    <a class='socials__item-link' href='./#'>
-                        <img class='socials__item-img' src='./svg/email.svg' alt='email' />
-                    </a>
-                </li>
-                <li class='socials__item'>
-                    <a class='socials__item-link' href='./#'>
-                        <img class='socials__item-img' src='./svg/linkedIn.svg' alt='linkedIn' />
-                    </a>
-                </li>
-                <li class='socials__item'>
-                    <a class='socials__item-link' href='./#'>
-                        <img class='socials__item-img' src='./svg/ig.svg' alt='ig' />
-                    </a>
-                </li>
-                <li class='socials__item'>
-                    <a class='socials__item-link' href='./#'>
-                        <img class='socials__item-img' src='./svg/vk.svg' alt='vk' />
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <footer class='footer main-framed'>
-            <a href='/#' class='link footer__link'>Check out my music! Like me on VK and SoundCloud!</a>
-            <img class='footer__seagull seagull' src='./img/others/seagull.png' alt='seagull'>
-        </footer>
-    </main>
+    </div>
 </body>
 
 </html>

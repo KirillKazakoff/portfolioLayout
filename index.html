@@ -15,11 +15,11 @@
     <div class='body__container'>
         <header class="header">
             <nav class='nav header__nav main-framed'>
-                <li class='nav__item'>Main</li>
-                <li class='nav__item'>About</li>
-                <li class='nav__item'>Skills</li>
-                <li class='nav__item'>Portfollio</li>
-                <li class='nav__item'>Contacts</li>
+                <li class='nav__item'><a class='nav__link' href='/#'>Main</a></li>
+                <li class='nav__item'><a class='nav__link' href='/#'>About</a></li>
+                <li class='nav__item'><a class='nav__link' href='/#'>Skills</a></li>
+                <li class='nav__item'><a class='nav__link' href='/#'>Portfollio</a></li>
+                <li class='nav__item'><a class='nav__link' href='/#'>Contacts</a></li>
             </nav>
             <div class='header__container main-framed'>
                 <div class="header__top">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <button class="btn-burger">
-                        <img class="btn-burger__img" src="./svg/burger.svg" alt="burger" width='33px' />
+                        <img class="btn-burger__img" src="./svg/burger.svg" alt="burger" />
                     </button>
                 </div>
 
@@ -45,7 +45,7 @@
         </header>
         <main class='main'>
             <section class='about main-framed'>
-                <span class='title title--margin title--about'>About me</span>
+                <span class='title title--padding title--about'>About me</span>
                 <div class='about__text text--info'>
                     <p class='about__text-p'>I'm a junior frontend developer... Love coding so much... and I'm a rapper as well, bruhhh!</p>
                     <p class='about__text-p'>I've graduated the course on Netology on program
@@ -56,7 +56,7 @@
                 </div>
             </section>
             <section class='skills main-framed'>
-                <span class='title title--margin'>Skills</span>
+                <span class='title title--padding'>Skills</span>
                 <ul class='skills__list text--info'>
                     <li class='skills__list-item'>
                         <span class='skills__list-item-hyphen'>-</span>
@@ -97,46 +97,46 @@
                 </ul>
             </section>
             <section class='portfolio main-framed'>
-                <span class='title title--margin-portfolio'>Portfolio</span>
+                <span class='title title--padding-portfolio'>Portfolio</span>
                 <ul class='portfolio__list'>
                     <li class='portfolio__item'>
-                        <img class='portfolio__item-img' src='./img/projects/React-Main-Project-desktop.png' alt='main-project' />
+                        <img class='portfolio__item-img portfolio__item--main' src='./img/projects/main.png' alt='main-project' src />
                         <div class='project__info'>
                             <span class='project__title project__title-main'>Main Project</span>
-                            <span class='project__title project__link link'>
-                                Railway ticket booking system
-                            </span>
-                            <span class='project__link link'>React-Redux</span>
+                            <a class='project__link link' href='https://github.com/KirillKazakoff/finalDiploma'>
+                                <span class='project__title'>Railway ticket booking system</span>
+                                <span class='project__desc'>React-Redux (non-adaptive)</span>
+                            </a>
                         </div>
                     </li>
                     <li class='portfolio__item'>
-                        <img class='portfolio__item-img' src='./img/projects/JS-Project-desktop.png' alt='JS-project' />
+                        <img class='portfolio__item-img' src='./img/projects/js.png' alt='JS-project' />
                         <div class='project__info'>
-                            <span class='project__title project__link link'>
-                                WhatsAppBot
-                            </span>
-                            <span class='project__link link'>JS-native application</span>
+                            <a class='project__link link' href='https://github.com/KirillKazakoff/diploma_JS_Main_Frontend'>
+                                <span class='project__title'>WhatsAppBot</span>
+                                <span class='project__desc'>JS-native (non-adaptive)</span>
+                            </a>
                         </div>
                     </li>
                     <li class='portfolio__item'>
-                        <img class='portfolio__item-img' src='./img/projects/CSS-Blog-desktop.png' alt='CSS-project' />
+                        <img class='portfolio__item-img' src='./img/projects/blog.png' alt='CSS-project' />
                         <div class='project__info'>
-                            <span class='project__title project__link link'>
-                                Site-blog
-                            </span>
-                            <span class='project__link link'>HTML-CSS, adaptive layout</span>
+                            <a class='project__link link' href='https://github.com/KirillKazakoff/css-diploma'>
+                                <span class='project__title'>Site-blog</span>
+                                <span class='project__desc'>HTML-CSS (adaptive layout)</span>
+                            </a>
                         </div>
                     </li>
                 </ul>
             </section>
             <section class='contacts main-framed'>
-                <span class='title title--margin'>Contacts</span>
+                <span class='title title--padding'>Contacts</span>
                 <span class='contacts__desc'>Want to know more or just chat?
                     You are welcome!
                 </span>
                 <ul class='socials'>
                     <li class='socials__item'>
-                        <a class='socials__item-link' href='./#'>
+                        <a class='socials__item-link' href='mailto: kirillkazakovwork@gmail.com'>
                             <img class='socials__item-img' src='./svg/email.svg' alt='email' />
                         </a>
                     </li>

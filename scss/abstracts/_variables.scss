@@ -12,36 +12,33 @@ $theme-colors: (
 
 $btn-background: #ff595e;
 
-$tablet: 568px;
-$desktop: 768px;
-$pre-pre-desktop: 1100px;
-$pre-desktop: 1268px;
+$md: 568px;
+$lg: 768px;
+$xl: 1100px;
+$xxl: 1268px;
 
-@mixin desktop {
-    @media (min-width: #{$desktop}) {
+@mixin md {
+    @media (min-width: #{$md}) and (max-width: #{$lg}) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: #{$lg}) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: #{$xl}) {
+        @content;
+    }
+}
+@mixin xxl {
+    @media (min-width: #{$xxl}) {
         @content;
     }
 }
 
-@mixin pre-desktop {
-    @media (max-width: #{$pre-desktop}) and (min-width: #{$desktop}) {
-        @content;
-    }
-}
-
-@mixin pre-pre-desktop {
-    @media (max-width: #{$pre-pre-desktop}) and (min-width: #{$desktop}) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (min-width: #{$tablet}) {
-        @content;
-    }
-}
-
-@mixin fcolumn($gap) {
+@mixin flex-column-gap($gap) {
     display: flex;
     flex-direction: column;
     row-gap: $gap;
@@ -62,9 +59,6 @@ $pre-desktop: 1268px;
 }
 
 :root {
-    /* additional */
-    --space-row: 30px;
-
     /* colors */
     --black: #000000;
     --black-light: #383838;
@@ -74,31 +68,29 @@ $pre-desktop: 1268px;
     --secondary-lighter: #cccccc;
     --secondary-medium-light: #e6e6e6;
     --secondary-super-light: #f6f6f6;
+    --aux-main: #ffa800;
+    --aux-main-medium: #ffd98f;
+    --aux-main-light: #fcdc9d;
+
+    // filters
+    --royalblue-filter: brightness(0) saturate(100%) invert(33%) sepia(64%)
+        saturate(1371%) hue-rotate(203deg) brightness(100%) contrast(92%);
+
+    --black-filter: brightness(0) saturate(100%) invert(13%) sepia(9%) saturate(0%)
+        hue-rotate(240deg) brightness(107%) contrast(95%);
 
     // paddings
     --main-padding: 35px;
-    @include tablet {
+    @include md {
         --main-padding: 50px;
     }
-
-    @include desktop {
-        --main-padding: 250px;
-    }
-
-    @include pre-desktop {
-        --main-padding: 150px;
-    }
-
-    @include pre-pre-desktop {
+    @include lg {
         --main-padding: 80px;
     }
+    @include xl {
+        --main-padding: 150px;
+    }
+    @include xxl {
+        --main-padding: 250px;
+    }
 }
-
-// --secondary: #928f94;
-// --secondary-lighter: #c4c4c4;
-// --secondary-super-light: #e5e5e5;
-
-// --black: #292929;
-// --black-light: #3e3c41;
-// --bg-main: #ffa800;
-// --bg-main-medium: #ffd98f;

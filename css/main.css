@@ -257,6 +257,7 @@ body {
   background-size: cover;
   height: 100vh;
   min-height: 600px;
+  max-height: 800px;
   padding-top: 65px;
   padding-bottom: 60px;
 }
@@ -265,7 +266,8 @@ body {
     padding-top: 80px;
     padding-bottom: 80px;
     background-image: url("../img/backgrounds/xleb-header-desktop.png");
-    height: 480px;
+    min-height: 450px;
+    max-height: 450px;
     display: flex;
     justify-content: center;
     padding-left: 0;
@@ -368,6 +370,10 @@ body {
     order: 1;
     margin-top: 0;
     margin-right: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .header__pic {
     margin-left: -150px;
   }
 }
